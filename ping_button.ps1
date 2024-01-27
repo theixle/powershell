@@ -21,6 +21,9 @@ $textbox.Size = New-Object System.Drawing.Size (700, 300)
 
 # Define the action to take when the button is clicked
 $button_click = {
+    # Show some filler text in the TextBox until the command completes
+    $textbox.Text = "Pinging google.com..."
+
     # Run the command and capture the output
     $output = Test-Connection google.com
 
